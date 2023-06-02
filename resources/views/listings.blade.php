@@ -1,14 +1,9 @@
 <h1> {{ $heading }} </h1>
 
-@if (count($listings) == 0)
+{{-- @if (count($listings) == 0)
 <p>No listings found.</p>
     
-@endif
-
-<?php foreach($listings as $listing): ?>
-    <h2> <?php echo $listing['title'] ?> </h2>
-    <p><?php echo $listing['desc'] ?></p>
-<?php endforeach ?>
+@endif --}}
 
 @unless (count($listings) == 0)
 @foreach($listings as $listing)
@@ -16,7 +11,7 @@
         <h2> {{$listing['title']}} </h2>
     </a>
     
-    <p>{{$listing['desc'] }}</p>
+    <p>{{$listing['description'] }}</p>
 @endforeach
 
 @else
@@ -24,8 +19,8 @@
 
 @endunless
 
-@php
+{{-- @php
     $test=1
 @endphp
 
-{{ $test }}
+{{ $test }} --}}
